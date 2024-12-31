@@ -229,7 +229,52 @@ View the metrics at:
 ```
 http://localhost:9090
 ```
+Here's the section to add to your README for running Prometheus and Grafana using Docker:
 
+
+
+## Running Prometheus and Grafana for Observability
+
+To run Prometheus and Grafana with your Node.js application, follow these steps:
+
+1. **Clone the repository** (if not already done) and navigate to the project folder.
+
+2. **Start Prometheus and Grafana containers** using Docker:
+
+   Run the following command to bring up the Prometheus and Grafana services:
+
+   ```bash
+   docker-compose -f prometheus/docker-compose-observability.yml up -d
+   ```
+
+   This will start Prometheus and Grafana in detached mode.
+
+3. **Access Prometheus Web UI**:
+
+   Once the containers are up, you can access the Prometheus Web UI at [http://localhost:9090](http://localhost:9090).
+
+4. **Access Grafana Web UI**:
+
+   You can also access the Grafana Web UI at [http://localhost:3000](http://localhost:3000).  
+   The default login is `admin`/`admin` (you can change this in the `docker-compose` file).
+
+5. **Add Prometheus as a Data Source in Grafana**:
+
+   - In Grafana, navigate to **Configuration > Data Sources**.
+   - Add Prometheus as a data source and set the URL to `http://prometheus:9090`.
+
+6. **Import Node.js Dashboard in Grafana**:
+
+   To import a pre-built Node.js monitoring dashboard in Grafana:
+   
+   - Go to **+ > Import** in Grafana.
+   - Enter **9628** for the dashboard ID (Node.js Dashboard) and click **Load**.
+   - Click **Import** to add the dashboard.
+
+Now, your Node.js application metrics will be scraped by Prometheus, and you can view them in Grafana.
+
+
+This section will guide users through running Prometheus and Grafana using Docker, configuring the data source, and importing a pre-built Node.js dashboard.
 ---
 
 ## **Contributing**
