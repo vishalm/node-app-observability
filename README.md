@@ -36,8 +36,8 @@ Before setting up the project, ensure you have the following installed:
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/vishalm/node-app-observability.git
+cd node-app-observability
 ```
 
 ### **2. Install Dependencies**
@@ -53,7 +53,7 @@ npm install
 Run Jaeger and Prometheus using Docker for distributed tracing and metrics collection:
 
 ```bash
-docker-compose up
+docker-compose -f docker-compose-jaeger.yml up
 ```
 
 This command will spin up the following services:
