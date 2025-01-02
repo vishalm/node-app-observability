@@ -268,7 +268,7 @@ To run Prometheus and Grafana with your Node.js application, follow these steps:
    To import a pre-built Node.js monitoring dashboard in Grafana:
    
    - Go to **+ > Import** in Grafana.
-   - Enter **9628** for the dashboard ID (Node.js Dashboard) and click **Load**.
+   - [node-app-observability/Express.js Node Application Application Performance Dashboard-1735804028769.json](https://github.com/vishalm/node-app-observability/blob/main/Express.js%20Node%20Application%20Application%20Performance%20Dashboard-1735804028769.json) and click **Load**.
    - Click **Import** to add the dashboard.
 
 Now, your Node.js application metrics will be scraped by Prometheus, and you can view them in Grafana.
