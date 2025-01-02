@@ -245,12 +245,14 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "expr": "http_response_time_seconds_bucket",
+          "editorMode": "code",
+          "expr": "http_response_time_seconds_bucket/10000",
           "legendFormat": "{{route}} - Response Time",
+          "range": true,
           "refId": "I"
         }
       ],
-      "title": "HTTP Response Time Distribution",
+      "title": "HTTP Response Time Distribution(Sec)",
       "type": "timeseries"
     },
     {
@@ -803,8 +805,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Application Performance Dashboard",
+  "title": "Express.js Node Application Application Performance Dashboard",
   "uid": "app-performance-dashboard-v3",
-  "version": 9,
+  "version": 12,
   "weekStart": ""
 }
